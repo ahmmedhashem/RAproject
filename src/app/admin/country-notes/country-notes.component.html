@@ -1,0 +1,79 @@
+<div class="dashboard-container">
+    <div class="row">
+        <div class="col-md-3 side-bar">
+            <app-sidebar></app-sidebar>
+        </div>
+        <div class="col-md-9 right-content">
+            <!-- Right Panel -->
+            <div id="right-panel" class="right-panel">
+                <app-navbar></app-navbar>
+                <app-breadcrumbs></app-breadcrumbs>
+                <div class="container">
+                    <div class="card text-center">
+                        <div class="card-header">
+                          <h3>COUNTRY NOTES</h3>
+                        </div>
+                        <form>
+                            <div class="card-body">
+                                <table class="table table-bordered">
+                                    <tr class="countries">
+                                        <td class="title">Country</td>
+                                        <td class="data">
+                                            <select class="form-control country" name = "Country" [(ngModel)] = "CountryNotes.Country">
+                                                <option disabled [ngValue]="null">-- Country --</option>
+                                                <option  *ngFor = " let country of Countries" [ngValue]="country.id">{{country.name}}</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="title">Notes</td>
+                                        <td class="data">
+                                            <form class="notes">
+                                                <img class="for-defintion-en" src="../../../assets/images/englishflag.png" width="45px" height="30px">
+                                                <div class="guide-en-message">Enter Notes In English</div>
+                                                <textarea 
+                                                    class="form-control" 
+                                                    placeholder="Enter Notes...." 
+                                                    name="NotesEn"  
+                                                    [(ngModel)] = "CountryNotes.NotesEn">
+                                                </textarea>
+                                                <img class="for-defintion-ar" src="../../../assets/images/Arabic-Language-Flag.svg" width="45px" height="30px">
+                                                <div class="guide-ar-message">Enter Notes In Arabic</div>
+                                                <textarea 
+                                                    class="form-control" 
+                                                    placeholder="Enter Notes...."
+                                                    name="NotesAr"  
+                                                    [(ngModel)] = "CountryNotes.NotesAr">
+                                                </textarea>
+                                            </form>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="title">Phone</td>
+                                        <td class="data">
+                                            <input 
+                                                type="text" 
+                                                class="form-control phone" 
+                                                name="Phone"  
+                                                [(ngModel)] = "CountryNotes.Phone" 
+                                                placeholder="Mob.No..">
+                                        </td>
+                                    </tr>
+                                </table>
+                              
+                            </div>
+                            <div class="card-footer text-muted">
+                                <button type="submit" class='btn btn-primary save-button' (click)="showww()"><i class="far fa-save"></i>Save</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+

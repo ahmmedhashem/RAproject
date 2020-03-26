@@ -1,0 +1,509 @@
+<div class="dashboard-container">
+    <div class="row">
+        <div class="col-md-3 side-bar">
+            <app-sidebar></app-sidebar>
+        </div>
+        <div class="col-md-9 right-content">
+            <!-- Right Panel -->
+            <div id="right-panel" class="right-panel">
+                <app-navbar></app-navbar>
+                <app-breadcrumbs></app-breadcrumbs>
+                <div class="container">
+                    <!--start contain card-->
+                    <div class="card contain-card">
+                        <div class="card-header">
+                            <h3>SITE OPTIONS</h3>
+                        </div>
+                        <div class="card-body">
+                             <!--start site options-->
+                            <div class="card text-center">
+                                <div class="card-header">
+                                <h3>EDIT OPTIONS</h3>
+                            </div>
+                            <form>
+                                <div class="card-body">
+                                    <table class="table table-bordered">
+                                        <tr>
+                                            <td class="title">Site Name</td>
+                                            <td class="data site-name">
+                                                <!-- full name in inglish-->
+                                                <img class="for-defintion-en" src="../../../assets/images/englishflag.png" width="45px" height="30px">
+                                                <div class="guide-en-message">Enter Site Name In English</div>
+                                                <div class="fullname">  
+                                                    <input 
+                                                        type="text" 
+                                                        name="SiteNameEn"  
+                                                        [(ngModel)] = "EditOptions.SiteNameEn"
+                                                        class="form-control" 
+                                                        placeholder="Site name In English"> 
+                                                </div>
+                                                <!--full name in arabic-->
+                                                <img class="for-defintion-ar" src="../../../assets/images/Arabic-Language-Flag.svg" width="45px" height="30px">
+                                                <div class="guide-ar-message">Enter Site Name In Arabic</div>
+                                                <div class="fullname">     
+                                                    <input 
+                                                        type="text" 
+                                                        name="SiteNameAr"  
+                                                        [(ngModel)] = "EditOptions.SiteNameAr"
+                                                        class="form-control" 
+                                                        placeholder="Site name In Arabic">
+                                                </div>  
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="title">Site Description</td>
+                                            <td class="data site-desc">
+                                                <!-- full name in inglish-->
+                                                <img class="for-defintion-en" src="../../../assets/images/englishflag.png" width="45px" height="30px">
+                                                <div class="guide-en-message">Enter Site Description In English</div>
+                                            
+                                                <textarea  
+                                                    name="SiteDescEn"  
+                                                    [(ngModel)] = "EditOptions.SiteDescEn"
+                                                    class="form-control" 
+                                                    placeholder="Site Description In English">
+                                                </textarea>
+                                    
+                                                <!--full name in arabic-->
+                                                <img class="for-defintion-ar" src="../../../assets/images/Arabic-Language-Flag.svg" width="45px" height="30px">
+                                                <div class="guide-ar-message">Enter Site Description In Arabic</div>
+                                        
+                                                <textarea  
+                                                    name="SiteDescAr"  
+                                                    [(ngModel)] = "EditOptions.SiteDescAr"
+                                                    class="form-control" 
+                                                    placeholder="Site Description In Arabic">
+                                                </textarea> 
+                                  
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="title">Keywords</td>
+                                            <td class="data site-desc">
+                                                <!-- full name in inglish-->
+                                                <img class="for-defintion-en" src="../../../assets/images/englishflag.png" width="45px" height="30px">
+                                                <div class="guide-en-message">Enter Keywords In English</div>
+                                        
+                                                    <textarea  
+                                                        name="KeywordsEn"  
+                                                        [(ngModel)] = "EditOptions.KeywordsEn"
+                                                        class="form-control" 
+                                                        placeholder="Site Keywords In English">
+                                                    </textarea> 
+                                                    
+                                        
+                                                <!--full name in arabic-->
+                                                <img class="for-defintion-ar" src="../../../assets/images/Arabic-Language-Flag.svg" width="45px" height="30px">
+                                                <div class="guide-ar-message">Enter Keywords In Arabic</div>
+                                            
+                                                    <textarea 
+                                                        name="KeywordsAr"  
+                                                        [(ngModel)] = "EditOptions.KeywordsAr"
+                                                        class="form-control" 
+                                                        placeholder="Site Keywords In Arabic">
+                                                    </textarea>    
+                                                
+                                       
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="title">Site Email</td>
+                                            <td class="data">
+                                                <input 
+                                                    type="email" 
+                                                    class="form-control email" 
+                                                    name="SiteEmail"  
+                                                    [(ngModel)] = "EditOptions.SiteEmail"
+                                                    placeholder="Enter Email">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="title">1 Ramadan Date</td>
+                                            <td class="data">
+                                                <input 
+                                                    type="text" 
+                                                    class="form-control email" 
+                                                    name="RamadanStartDate"  
+                                                    [(ngModel)] = "EditOptions.RamadanStartDate"
+                                                    placeholder="Enter 1 Ramadan Date">
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="card-footer text-muted">
+                                    <button class='btn btn-primary save-button' (click)="showww()"><i class="far fa-save"></i>Save</button>
+                                </div>
+                            </form>
+            
+                        </div>
+                    <!--end site options-->
+
+                    <!-- start member settings-->
+                    <div class="card text-center">
+                        <div class="card-header">
+                          <h3>MEMBER SETTINGS</h3>
+                        </div>
+                        <form>
+                            <div class="card-body">
+                                <table class="table table-bordered">
+                                    <tr>
+                                        <td class="title">Allow new Registration</td>
+                                        <td class="data">
+                                            <div class="newsletter">
+                                                
+                                                
+                                                <input  
+                                                type="radio" 
+                                                id="AllowReg" 
+                                                name="NewReg" 
+                                                value="yes" 
+                                                (change)="radioAllowNewRegChangeHandeler($event)">
+                                                <label for="AllowReg">Yes</label>
+                                                <input  
+                                                    type="radio" 
+                                                    id="NotAllowReg" 
+                                                    name="NewReg" 
+                                                    value="no" 
+                                                    (change)="radioAllowNewRegChangeHandeler($event)">
+                                                <label for="NotAllowReg">no</label> 
+
+
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="title">Membership activation</td>
+                                        <td class="data">
+                                            <div class="newsletter">
+                                               
+
+
+                                                <input  
+                                                    type="radio" 
+                                                    id="auto" 
+                                                    name="MemActivation" 
+                                                    value="automatic" 
+                                                    (change)="radioMemShipChangeHandeler($event)">
+                                                <label for="auto">Automatic</label>
+                                                <input  
+                                                    type="radio" 
+                                                    id="EConfirmation" 
+                                                    name="MemActivation" 
+                                                    value="EmailConfirmation" 
+                                                    (change)="radioMemShipChangeHandeler($event)">
+                                                <label for="EConfirmation">Email Confirmationo</label> 
+                                                <input  
+                                                    type="radio" 
+                                                    id="manual" 
+                                                    name="MemActivation" 
+                                                    value="manual" 
+                                                    (change)="radioAllowNewRegChangeHandeler($event)">
+                                                <label for="manual">Manual By Admin</label> 
+
+
+
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="title">Disable Calender Editing</td>
+                                        <td class="data">
+                                            <div class="newsletter">
+                                              
+                                                <input  
+                                                    type="radio" 
+                                                    id="AllowEdit" 
+                                                    name="CalenderEdit" 
+                                                    value="yes" 
+                                                    (change)="radioCalenderEditChangeHandeler($event)">
+                                                <label for="AllowEdit">Yes</label>
+                                                <input  
+                                                    type="radio" 
+                                                    id="NotAllowEdit" 
+                                                    name="CalenderEdit" 
+                                                    value="no" 
+                                                    (change)="radioCalenderEditChangeHandeler($event)">
+                                                <label for="NotAllowEdit">no</label> 
+
+
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="card-footer text-muted">
+                                <button class='btn btn-primary save-button' (click)="showww()"><i class="far fa-save"></i>Save</button>
+                            </div>
+                        </form>
+                    
+                    </div>
+                    <!--end members settings-->
+
+                    <!--start language settings-->
+                    <div class="card text-center">
+                        <div class="card-header">
+                          <h3>LANGUAGE SETTINGS</h3>
+                        </div>
+                        <form>
+                            <div class="card-body">
+                                <table class="table table-bordered">
+                                    <tr>
+                                        <td class="title">Default Language</td>
+                                        <td class="data">
+                                            <div class="newsletter">
+                                               
+    
+                                                <input  
+                                                    type="radio" 
+                                                    id="arabic" 
+                                                    name="DefaultLang" 
+                                                    value="arabic" 
+                                                    (change)="radioDefLangChangeHandeler($event)">
+                                                <label for="arabic">Arabic</label>
+                                                <input  
+                                                    type="radio" 
+                                                    id="english" 
+                                                    name="DefaultLang" 
+                                                    value="english" 
+                                                    (change)="radioDefLangChangeHandeler($event)">
+                                                <label for="english">English</label> 
+    
+    
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="title">Other Language</td>
+                                        <td class="data">
+                                            <div class="newsletter">
+                                                
+    
+    
+                                                <input  
+                                                    type="radio" 
+                                                    id="AllowOtherLang" 
+                                                    name="OtherLang" 
+                                                    value="yes" 
+                                                    (change)="radioOtherLangChangeHandeler($event)">
+                                                <label for="AllowOtherLang">Yes</label>
+                                                <input  
+                                                    type="radio" 
+                                                    id="NotAllowOtherLang" 
+                                                    name="OtherLang" 
+                                                    value="no" 
+                                                    (change)="radioOtherLangChangeHandeler($event)">
+                                                <label for="NotAllowOtherLang">No</label> 
+    
+    
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="card-footer text-muted">
+                                <button class='btn btn-primary save-button' (click)="showww()"><i class="far fa-save"></i>Save</button>
+                            </div>
+                        </form>
+             
+                    </div>
+                    <!--end language settings-->
+
+                     <!--start language settings-->
+                     <div class="card text-center">
+                        <div class="card-header">
+                          <h3>SITE LOGO SETTINGS</h3>
+                        </div>
+                        <form>
+                            <div class="card-body">
+                                <table class="table table-bordered">
+                                    <tr>
+                                        <td class="title">Site Logo</td>
+                                        <td class="data">
+                                            <div class="image">
+                                                <img src="../../../assets/images/homeimage.png" alt="english flag" width="100%" height="100%">
+                                                
+                                            </div>
+                                            <a class="deleteImage" href="#">Delete</a>
+                                            <input 
+                                                type="file" 
+                                                (change)="getLogoFiles($event)" 
+                                                name="SiteLogo" 
+                                                id="file" 
+                                                class="inputfile chooseImage" />
+                                            <label class="uploade-image" for="file"> <i class="fas fa-upload"></i>Choose a file</label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="title">Site Color</td>
+                                        <td class="data site-colors">
+                                            <div class="newsletter">
+                                               
+    
+                                                
+                                                <input  
+                                                    type="radio" 
+                                                    id="red" 
+                                                    name="red" 
+                                                    value="red" 
+                                                    (change)="radioSiteColChangeHandeler($event)">
+                                                <label for="red"></label>
+                                                <input  
+                                                    type="radio" 
+                                                    id="yellow" 
+                                                    name="yellow" 
+                                                    value="yellow" 
+                                                    (change)="radioSiteColChangeHandeler($event)">
+                                                <label for="yellow"></label> 
+    
+    
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="card-footer text-muted">
+                                <button class='btn btn-primary save-button' (click)="showww()"><i class="far fa-save"></i>Save</button>
+                            </div>
+                        </form>
+
+                    </div>
+                    <!--end language settings-->
+
+                     <!--start contact info settings-->
+                     <div class="card text-center">
+                        <div class="card-header">
+                          <h3>CONTACT INFO SETTINGS</h3>
+                        </div>
+                        <form>
+                            <div class="card-body">
+                                <table class="table table-bordered">
+                                    <tr>
+                                        <td class="title">Phone Number</td>
+                                        <td class="data">
+                                            <input 
+                                                type="text" 
+                                                class="form-control phoneNom" 
+                                                name="Phone"  
+                                                [(ngModel)] = "ContSett.Phone"
+                                                placeholder="Enter Phone Number">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="title">Email</td>
+                                        <td class="data">
+                                            <input 
+                                                type="email" 
+                                                class="form-control email" 
+                                                name="Email"  
+                                                [(ngModel)] = "ContSett.Email"
+                                                placeholder="Enter Email">
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="card-footer text-muted">
+                                <button class='btn btn-primary save-button' (click)="showww()"><i class="far fa-save"></i>Save</button>
+                            </div>
+                        </form>
+                        
+                    </div>
+                    <!--end contact info settings-->
+
+                     <!--start socail media settings-->
+                     <div class="card text-center">
+                        <div class="card-header">
+                          <h3>SOCIAL NETWORKS SETTINGS</h3>
+                        </div>
+                        <form>
+                            <div class="card-body">
+                                <table class="table table-bordered">
+                                    <tr>
+                                        <td class="title">Facebook</td>
+                                        <td class="data">
+                                            <input 
+                                                type="text" 
+                                                class="form-control " 
+                                                name="Facebook"  
+                                                [(ngModel)] = "SocailSett.Facebook"
+                                                placeholder="Enter Link">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="title">Twitter</td>
+                                        <td class="data">
+                                            <input 
+                                                type="text" 
+                                                class="form-control " 
+                                                name="Twitter"  
+                                                [(ngModel)] = "SocailSett.Twitter"
+                                                placeholder="Enter Link">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="title">Youtube</td>
+                                        <td class="data">
+                                            <input 
+                                                type="text" 
+                                                class="form-control " 
+                                                name="Youtube"  
+                                                [(ngModel)] = "SocailSett.Youtube"
+                                                placeholder="Enter Link">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="title">Linked In</td>
+                                        <td class="data">
+                                            <input 
+                                                type="text" 
+                                                class="form-control " 
+                                                name="LinkedIn"  
+                                                [(ngModel)] = "SocailSett.LinkedIn"
+                                                placeholder="Enter Link">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="title">Instagram</td>
+                                        <td class="data">
+                                            <input 
+                                                type="text" 
+                                                class="form-control " 
+                                                name="Instagram"  
+                                                [(ngModel)] = "SocailSett.Instagram"
+                                                placeholder="Enter Link">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="title">Snapchat</td>
+                                        <td class="data">
+                                            <input 
+                                                type="text" 
+                                                class="form-control " 
+                                                name="Snapchat"  
+                                                [(ngModel)] = "SocailSett.Snapchat" 
+                                                placeholder="Enter Link">
+                                        </td>
+                                    </tr>
+                                    
+                                </table>
+                            </div>
+                            <div class="card-footer text-muted">
+                                <button class='btn btn-primary save-button' (click)="showww()"><i class="far fa-save"></i>Save</button>
+                            </div>
+                        </form>
+                
+                    </div>
+                    <!--end socail media settings-->
+                        </div>
+                    </div>
+                    <!--end contain card-->
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+

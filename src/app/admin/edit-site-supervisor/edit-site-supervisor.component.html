@@ -1,0 +1,277 @@
+<div class="dashboard-container">
+    <div class="row">
+        <div class="col-md-3 side-bar">
+            <app-sidebar></app-sidebar>
+        </div>
+        <div class="col-md-9 right-content">
+            <!-- Right Panel -->
+            <div id="right-panel" class="right-panel">
+                <app-navbar></app-navbar>
+                <app-breadcrumbs></app-breadcrumbs>
+                <div class="container">
+                    <div class="card text-center">
+                        <div class="card-header">
+                          <h3>EDIT SITE SUPERVISOR</h3>
+                          <div class="close" (click)="goback()">
+                              <span>x</span>
+                          </div>
+                        </div>
+                        <form>
+                            <div class="card-body">
+                                <table class="table table-bordered">
+                                    <tr>
+                                        <td class="title">Type</td>
+                                        <td class="data">
+                                            
+                                            <select name = "Type" [(ngModel)] = "EditSiteSup.Type">
+                                                <option disabled [ngValue]="null">-- Type --</option>
+                                                <option  *ngFor = " let type of Types" [ngValue]="type">{{type}}</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="title">Password</td>
+                                        <td class="data">
+                                            <form>
+                                                <input 
+                                                    type="password" 
+                                                    class="form-control password" 
+                                                    name="Password"  
+                                                    [(ngModel)] = "EditSiteSup.Password"
+                                                    placeholder="Enter The Password">
+                                                <i class="show-pass fa fa-eye fa-2x"></i>
+                                            </form>
+                                            
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="title">Full Name</td>
+                                        <td class="data">
+                                            <!-- full name in inglish-->
+                                            <img class="for-defintion-en" src="../../../assets/images/englishflag.png" width="45px" height="30px">
+                                            <div class="guide-en-message">Enter Full Name In English</div>
+                                            <div class="fullname">
+                                                <div class="row">
+                                                    <div class="col section">
+                                                        <input 
+                                                            type="text" 
+                                                            name="FirstNameEn"  
+                                                            [(ngModel)] = "EditSiteSup.FirstNameEn"
+                                                            class="form-control" 
+                                                            placeholder="First name">
+                                                    </div>
+                                                    <div class="col section">
+                                                        <input 
+                                                            type="text" 
+                                                            name="SecondNameEn"  
+                                                            [(ngModel)] = "EditSiteSup.SecondNameEn"
+                                                            class="form-control" 
+                                                            placeholder="Second name">
+                                                    </div>
+                                                    <div class="col section">
+                                                        <input 
+                                                            type="text" 
+                                                            name="ThirdNameEn"  
+                                                            [(ngModel)] = "EditSiteSup.ThirdNameEn"
+                                                            class="form-control" 
+                                                            placeholder="Third name">
+                                                    </div>
+                                                    <div class="col section">
+                                                        <input 
+                                                            type="text" 
+                                                            name="FourthNameEn"  
+                                                            [(ngModel)] = "EditSiteSup.FourthNameEn"
+                                                            class="form-control" 
+                                                            placeholder="Last name">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--full name in arabic-->
+                                            <img class="for-defintion-ar" src="../../../assets/images/Arabic-Language-Flag.svg" width="45px" height="30px">
+                                            <div class="guide-ar-message">Enter Full Name In Arabic</div>
+                                            <div class="fullname">
+                                                <div class="row">
+                                                    <div class="col section">
+                                                        <input 
+                                                            type="text" 
+                                                            name="FirstNameAr"  
+                                                            [(ngModel)] = "EditSiteSup.FirstNameAr"
+                                                            class="form-control" 
+                                                            placeholder="First name">
+                                                    </div>
+                                                    <div class="col section">
+                                                        <input 
+                                                            type="text" 
+                                                            name="SecondNameAr"  
+                                                            [(ngModel)] = "EditSiteSup.SecondNameAr"
+                                                            class="form-control" 
+                                                            placeholder="Second name">
+                                                    </div>
+                                                    <div class="col section">
+                                                        <input 
+                                                            type="text" 
+                                                            name="ThirdNameAr"  
+                                                            [(ngModel)] = "EditSiteSup.ThirdNameAr"
+                                                            class="form-control" 
+                                                            placeholder="Third name">
+                                                    </div>
+                                                    <div class="col section">
+                                                        <input 
+                                                            type="text" 
+                                                            name="FourthNameAr"  
+                                                            [(ngModel)] = "EditSiteSup.FourthNameAr"
+                                                            class="form-control" 
+                                                            placeholder="Last name">
+                                                    </div>
+                                                </div>
+                                            </div>  
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="title">Phone Number</td>
+                                        <td class="data">
+                                            <input 
+                                                type="text" 
+                                                class="form-control phoneNom" 
+                                                name="Phone"  
+                                                [(ngModel)] = "EditSiteSup.Phone"
+                                                placeholder="Enter Phone Number">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="title">Email</td>
+                                        <td class="data">
+                                            <input 
+                                                type="email" 
+                                                class="form-control email" 
+                                                name="Email"  
+                                                [(ngModel)] = "EditSiteSup.Email"
+                                                placeholder="Enter Email">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="title">Gender</td>
+                                        <td class="data">
+                                            <div class="gender">
+                                                <input  
+                                                    type="radio" 
+                                                    id="male" 
+                                                    name="gender" 
+                                                    value="male" 
+                                                    (change)="radioGenderChangeHandeler($event)">
+                                                <label for="male">Male</label>
+                                                <input  
+                                                    type="radio" 
+                                                    id="female" 
+                                                    name="gender" 
+                                                    value="female" 
+                                                    (change)="radioGenderChangeHandeler($event)">
+                                                <label for="female">female</label> 
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="title">Membership Type</td>
+                                        <td class="data">
+                                            <div class="form-group select-mem-type-group">
+                                                <select class="form-control mem-type" name = "MemType" [(ngModel)] = "EditSiteSup.MemType" required> 
+                                                    <option selected disabled [ngValue]="null">-- Member Type --</option>
+                                                    <option value="vol">Volunteer</option>
+                                                    <option value="sup">Site Supervisor</option>       
+                                                </select>
+                                                <div class="place">
+                                                    <label class="Registeration-lable" for="validationTooltip04">
+                                                        Country :
+                                                    </label>
+                                                    <select name="Country" class="select-place"  required [(ngModel)] = "EditSiteSup.Place">  
+                                                        <option disabled [ngValue]="null"> -- Place --</option>
+                                                        <option *ngFor = " let loc of Locations" [ngValue]="loc.id">{{loc.name}}</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>    
+                                    <tr>
+                                        <td class="title">Nationality</td>
+                                        <td class="data">
+                                            <select class="form-control nationality" name = "Nationalty" [(ngModel)] = "EditSiteSup.Nationalty">
+                                                <option disabled [ngValue]="null">-- Nationality --</option>
+                                                <option  *ngFor = " let nationality of Nationalities" [ngValue]="nationality.id">{{nationality.name}}</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <!-- <tr>
+                                        <td class="title">Country</td>
+                                        <td class="data">
+                                            <select class="form-control country">
+                                                <option>-- Country --</option>
+                                            </select>
+                                        </td>
+                                    </tr> -->
+                                    <tr>
+                                        <td class="title">News Letter?</td>
+                                        <td class="data">
+                                            <div class="newsletter">
+                                                <input  
+                                                    type="radio" 
+                                                    id="yes" 
+                                                    name="newsletter" 
+                                                    value="yes" 
+                                                    (change)="radioNewsChangeHandeler($event)">
+                                                <label for="yes">Yes</label>
+                                                <input  
+                                                    type="radio" 
+                                                    id="no" 
+                                                    name="newsletter" 
+                                                    value="no" 
+                                                    (change)="radioNewsChangeHandeler($event)">
+                                                <label for="no">no</label> 
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="title">Notes</td>
+                                        <td class="data">
+                                            <form class="notes">
+                                                <textarea 
+                                                    class="form-control" 
+                                                    name="Notes"  
+                                                    [(ngModel)] = "EditSiteSup.Notes"
+                                                    placeholder="Enter Notes....">
+                                                </textarea>
+                                            </form>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="title">Active</td>
+                                        <td class="data">
+                                            <div class="newsletter">
+                                                <input  type="radio" id="active" name="Status" value="active" (change)="radioStatusChangeHandeler($event)">
+                                                <label for="active">Yes</label>
+                                                <input  type="radio" id="notactive" name="status" value="notactive" (change)="radioStatusChangeHandeler($event)">
+                                                <label for="notactive">No</label> 
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>  
+                            </div>
+                            <div class="card-footer text-muted">
+                                <button class='btn btn-primary save-button' (click)="showww()"><i class="far fa-save"></i>Save</button>
+                                <div class="member-login-info">
+                                    <h5>Date : <span class="date">10-12-2019</span></h5>
+                                    <h5>Last Login : <span class="last-time">14/06/2018 09:33 AM</span></h5>
+                                    <h5>IP: <span class="ip"> 91.73.87.14</span></h5>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+

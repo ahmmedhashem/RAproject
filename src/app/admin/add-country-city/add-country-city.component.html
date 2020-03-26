@@ -1,0 +1,112 @@
+<div class="dashboard-container">
+    <div class="row">
+        <div class="col-md-3 side-bar">
+            <app-sidebar></app-sidebar>
+        </div>
+        <div class="col-md-9 right-content">
+            <!-- Right Panel -->
+            <div id="right-panel" class="right-panel">
+                <app-navbar></app-navbar>
+                <app-breadcrumbs></app-breadcrumbs>
+                <div class="container">
+                    <div class="card text-center">
+                        <div class="card-header">
+                          <h3>Add New Section</h3>
+                          <div class="close" (click)="goback()">
+                              <span>x</span>
+                          </div>
+                        </div>
+                        <div class="card-body">
+                            <table class="table table-bordered">
+                                <tr class="section-type">
+                                    <td class="title">Section Type</td>
+                                    <td class="data">
+
+                                        <div class="form-group select-agency-group">
+                                            <select name="SectionType" class="select-section"  required [(ngModel)] = "CountryCity.SectionType">
+                                                <option selected disabled value="null">--Choose--</option>
+                                                <option value="main">Main Section</option>
+                                                <option value="sub">Sub Section</option>
+                                            </select>
+                                            <div class="country">
+                                                <label class="Registeration-lable" for="validationTooltip04">
+                                                    Country :
+                                                </label>
+                                                <select name="Country" class="select-country"  required [(ngModel)] = "CountryCity.Country">  
+                                                    <option disabled [ngValue]="null"> -- Country --</option>
+                                                    <option *ngFor = " let country of Countries" [ngValue]="country.id">{{country.name}}</option>
+                                                </select>
+                                            </div>
+                                            
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="title">Section Name</td>
+                                    <td class="data">
+                                        <div class="english">
+                                            <label class="refer">
+                                                <img src="../../../assets/images/englishflag.png" alt="english flag" width="100%" height="100%">
+                                            </label>
+                                            <input 
+                                                type="text" 
+                                                class="form-control" 
+                                                [(ngModel)] = "CountryCity.NameEn" 
+                                                name="NameEn" 
+                                                placeholder="Enter The Name In English">
+                                        </div>
+                                        <div class="arabic">
+                                            <label class="refer">
+                                                <img src="../../../assets/images/Arabic-Language-Flag.svg" alt="english flag" width="100%" height="100%">
+                                            </label>
+                                            <input 
+                                                type="text" 
+                                                class="form-control" 
+                                                [(ngModel)] = "CountryCity.NameAr" 
+                                                name="NameAr" 
+                                                placeholder="Enter The Name In Arabic">
+                                        </div>
+                                        
+                                    </td>
+                                </tr>
+                                <tr class="image-row">
+                                    <td class="title">Image</td>
+                                    <td class="data">
+                                        <input 
+                                            type="file"
+                                            (change)="getFiles($event)" 
+                                            name="Image" 
+                                            id="file" 
+                                            class="inputfile chooseImage" />
+                                        <label class="uploade-image" for="file"> <i class="fas fa-upload"></i>Choose a file</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="title">Phone Code</td>
+                                    <td class="data">
+                                        <input 
+                                            type="text" 
+                                            class="form-control phoneCode" 
+                                            [(ngModel)] = "CountryCity.PhoneCode" 
+                                            name="PhoneCode"
+                                            placeholder="Country Phone Code">
+                                    </td>
+                                </tr>
+                                
+                            </table>
+                          
+                        </div>
+                        <div class="card-footer text-muted">
+                            <button type="submit" class='btn btn-primary add-button' (click)="showww()"><i class="fas fa-plus"></i>Add</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+

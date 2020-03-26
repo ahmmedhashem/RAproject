@@ -1,0 +1,69 @@
+@import "../../../styles.scss";
+@import "../volunteers-report/volunteers-report.component.scss";
+
+
+.container{
+    .table{
+        .check{
+            width: 5%;
+        }
+        .location{
+            width: 80%;
+        }
+        .option{
+            width: 10%;
+        }
+        .dropdown{
+            .dropdown-toggle{
+                display: inline-block;
+                float: left;
+                cursor: pointer;
+                margin-bottom: 15px;
+                i{
+                    display: inline-block;
+                    font-size: 20px;
+                    margin-right: 5px;
+                }
+                .parent-h{
+                    display: inline-block;
+                    font-size: 20px;
+                }
+            }
+            
+            .parent-hr{
+                clear: both;
+            }
+            .dropdown-menu{
+                position: relative!important;
+                top: 0;
+                left: 0;
+                border: none;
+                transform: none!important;
+                width: 86%; 
+                margin: 0 40px;
+                li{
+                    padding: 8px 10px;
+                    h6{
+                        font-size: 14px;
+                        display: inline-block;
+                        color: $tableRowColor;
+                    }
+                    i{
+                        margin-right: 3px;
+                        color: $tableRowColor;
+                        font-size: 11px;
+                    }  
+                }
+                .clildren-hr{
+                    text-align: center;
+                    width: 100%;
+                   margin: 0;
+                }
+            }
+        }
+    }
+}
+
+// .show-drop-down{
+//     display: block!important;
+// }
