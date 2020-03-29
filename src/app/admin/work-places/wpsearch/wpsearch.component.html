@@ -1,0 +1,25 @@
+<div class="search">
+    <form method="POST"  action="#">
+        <div>
+            <span *ngIf="OrgAdmin">
+                <select name="Country" class="search-select" [(ngModel)] = "WPSearchResult.Country">
+                    <option disabled [ngValue]="null"> -- Country --</option>
+                    <option *ngFor = " let country of Countries" [ngValue]="country.id">{{country.name}}</option>
+                </select>
+            </span>
+            <span *ngIf="CounAdmin">
+                <select name="City" class="search-select" [(ngModel)] = "WPSearchResult.City">
+                    <option disabled [ngValue]="null"> -- City --</option>
+                    <option *ngFor = " let city of Cities" [ngValue]="city.id">{{city.name}}</option>
+                </select>
+            </span>
+            <span id="refplaces" *ngIf="CityAdmin">
+                <select name="Place" class="search-select" [(ngModel)] = "WPSearchResult.Place">
+                    <option disabled [ngValue]="null"> -- Place --</option>
+                    <option *ngFor = " let place of Places" [ngValue]="place.id"> {{place.name}}</option>
+                </select>
+            </span>
+            <button  type="submit" class="btn search-button" (click)="showww()"> Serach</button>
+        </div>
+    </form>
+</div>

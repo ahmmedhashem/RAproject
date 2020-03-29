@@ -1,0 +1,36 @@
+<div class="search">
+    <form method="POST"  action="#" *ngIf="OrgCounCityAdmins">
+        <div>
+            <span *ngIf="CountryAdmins">
+                <select name="Day" class="search-select" [(ngModel)] = "AttSearchResult.Day" required>
+                    <option disabled [ngValue]="null"> -- Day --</option>
+                    <option *ngFor = " let day of Dayes" [ngValue]="day">{{day}} &nbsp;Ramadan</option>
+                    
+                </select>
+            </span>
+            <span *ngIf="OrgAdmins">
+                <select name="Country" class="search-select" [(ngModel)] = "AttSearchResult.Country">
+                    <option disabled [ngValue]="null"> -- Country --</option>
+                    <option *ngFor = " let country of Countries" [ngValue]="country.id">{{country.name}}</option>
+                </select>
+            </span>
+            <span *ngIf="CountryAdmins">
+                <select name="City" class="search-select" [(ngModel)] = "AttSearchResult.City">
+                    <option disabled [ngValue]="null"> -- City --</option>
+                    <option *ngFor = " let city of Cities" [ngValue]="city.id">{{city.name}}</option>
+                </select>
+            </span>
+            <span id="refplaces" *ngIf="CityAdmins">
+                <select name="Place" class="search-select" [(ngModel)] = "AttSearchResult.Place">
+                    <option disabled [ngValue]="null"> -- Place --</option>
+                    <option *ngFor = " let place of Places" [ngValue]="place.id"> {{place.name}}</option>
+                </select>
+            </span>
+            <button  type="submit" class="btn search-button" (click)="showww()"> Serach</button>
+        </div>
+    </form>
+     <!--appear when login acount is location supervisor-->
+     <div class="this-day" *ngIf="PlaceAdmin">
+        <h4>Day : <span>1 Ramadan</span></h4>
+    </div>
+</div>

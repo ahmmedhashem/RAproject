@@ -1,0 +1,113 @@
+<div class="dashboard-container">
+    <div class="row">
+        <div class="col-md-3 side-bar">
+            <app-sidebar></app-sidebar>
+        </div>
+        <div class="col-md-9 right-content">
+            <!-- Right Panel -->
+            <div id="right-panel" class="right-panel">
+                <app-navbar></app-navbar>
+                <app-breadcrumbs></app-breadcrumbs>
+                <div class="container">
+                    <a href='#' routerLink='/AddCountriesCites' class='btn btn-primary top-add-button'><i class="fas fa-plus"></i>Add New Section</a>
+                    <div class="table-responsive">
+                        <table class="main-table mange-member table table-bordered text-center" BORDERCOLOR=RED>
+                            <tr>
+                                <td class="check"><input type="checkbox"></td>
+                                <td class="location">Section</td>
+                                <td class="option">Option</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td>
+                                    <div class="dropdown">
+                                        <div class="dropdown-toggle" id="dropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="fas fa-home"></i>
+                                            <h3 class="parent-h"> United Arab Emirates</h3>   
+                                        </div>
+                                        <span class="parent-status"><i class="fas fa-check"></i>Enabled</span>
+                                        <hr class="parent-hr">
+                                        <div class="dropdown-menu children list-unstyled text-left" >
+                                            
+                                            <li class="dropdown-item">
+                                                <i class="fas fa-location-arrow"></i>
+                                                <h6>Dubai</h6>
+                                                <span class="child-delete"><i class="far fa-trash-alt"></i>Delete</span>
+                                                <span class="child-edit"><i class="far fa-edit"></i>Edit</span>
+                                                <span class="child-status"><i class="fas fa-times"></i>Desabled</span>
+                                            </li>
+                                            <hr class="clildren-hr">
+                                            <li class="dropdown-item">
+                                                <i class="fas fa-location-arrow"></i>
+                                                <h6>Abu Dhabi</h6>
+                                                <span class="child-delete"><i class="far fa-trash-alt"></i>Delete</span>
+                                                <span class="child-edit"><i class="far fa-edit"></i>Edit</span>
+                                                <span class="child-status"><i class="fas fa-times"></i>Desabled</span>
+                                            </li>
+                                            <hr class="clildren-hr">
+                                            <li class="dropdown-item">
+                                                <i class="fas fa-location-arrow"></i>
+                                                <h6>Ajman</h6>
+                                                <span class="child-delete"><i class="far fa-trash-alt"></i>Delete</span>
+                                                <span class="child-edit"><i class="far fa-edit"></i>Edit</span>
+                                                <span class="child-status"><i class="fas fa-times"></i>Desabled</span>
+                                            </li>
+                                            <hr class="clildren-hr">
+                                            <li class="dropdown-item">
+                                                <i class="fas fa-location-arrow"></i>
+                                                <h6>Fujairah</h6>
+                                                <span class="child-delete"><i class="far fa-trash-alt"></i>Delete</span>
+                                                <span class="child-edit"><i class="far fa-edit"></i>Edit</span>
+                                                <span class="child-status"><i class="fas fa-times"></i>Desabled</span>
+                                            </li>
+                                            <hr class="clildren-hr">
+                                            <li class="dropdown-item">
+                                                <i class="fas fa-location-arrow"></i>
+                                                <h6>Ras al Khaimah</h6>
+                                                <span class="child-delete"><i class="far fa-trash-alt"></i>Delete</span>
+                                                <span class="child-edit"><i class="far fa-edit"></i>Edit</span>
+                                                <span class="child-status"><i class="fas fa-times"></i>Desabled</span>
+                                            </li>
+                                            <hr class="clildren-hr">
+                                            <li class="dropdown-item">
+                                                <i class="fas fa-location-arrow"></i>
+                                                <h6>Sharjah </h6>
+                                                <span class="child-delete"><i class="far fa-trash-alt"></i>Delete</span>
+                                                <span class="child-edit"><i class="far fa-edit"></i>Edit</span>
+                                                <span class="child-status"><i class="fas fa-times"></i>Desabled</span>
+                                            </li>
+                                            <hr class="clildren-hr">
+                                            <li class="dropdown-item">
+                                                <i class="fas fa-location-arrow"></i>
+                                                <h6>Umm al Quwain</h6>
+                                                <span class="child-delete"><i class="far fa-trash-alt"></i>Delete</span>
+                                                <span class="child-edit"><i class="far fa-edit"></i>Edit</span>
+                                                <span class="child-status"><i class="fas fa-times"></i>Desabled</span>
+                                            </li>
+                                        </div>
+                                    </div>  
+                                   
+                                </td>
+                               
+                                <td>
+                                    <a href="#" routerLink='/EditCountriesCites' class="edit-option">
+                                        <i class="far fa-edit"></i>Edit
+                                    </a>
+                                </td>
+                          </tr>	
+
+                        </table>
+                    </div>
+                    <a href='#' class='btn btn-primary activate'><i class="fas fa-check"></i>Activate</a>
+                    <a href='#' class='btn btn-primary disactivate'><i class="fas fa-times"></i>Deny</a>
+                    <a href='#' class='btn btn-primary delete'><i class="far fa-trash-alt"></i>Delete</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+

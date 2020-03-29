@@ -1,0 +1,97 @@
+<div class="dashboard-container">
+    <div class="row">
+        <div class="col-md-3 side-bar">
+            <app-sidebar></app-sidebar>
+        </div>
+        <div class="col-md-9 right-content">
+            <!-- Right Panel -->
+            <div id="right-panel" class="right-panel">
+                <app-navbar></app-navbar>
+                <app-breadcrumbs></app-breadcrumbs>
+                <div class="container">
+                    <a href='#'  class='btn btn-primary print-botton'><i class="fas fa-print"></i>Print</a>
+                    <div class="table-responsive">
+                        <table class="main-table mange-member table table-bordered text-center" BORDERCOLOR=RED>
+                            <tr>   
+                                <td class="location">Country</td>
+                                <td class="option">Volunteers Count</td>
+                            </tr>
+                            <tr>
+                                
+                                <td>
+                                    <li class="dropdown list-unstyled">
+                                        <a class="dropdown-toggle main-country" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 
+                                            <i class="fas fa-home"></i>
+                                            <h3 class="parent-h"> United Arab Emirates</h3> 
+                                        </a>
+                                        <hr class="parent-hr">
+                                        <ul class="dropdown-menu city-menue list-unstyled" aria-labelledby="navbarDropdown">
+                                            <li class="dropdown">
+                                                <span class="child-status not-reg"><i class="fas fa-times"></i>8</span>
+                                                <span class="explan-not-reg">Not Register In Ramadan Dayes</span>
+                                                
+                                                <span class="child-status reg"><i class="fas fa-check"></i>65</span>
+                                                <span class="explan-reg">Register In Ramadan Dayes</span>
+                                                
+                                                <hr class="clildren-hr">
+                                                <a class="dropdown-toggle main-city" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    <i class="fas fa-location-arrow"></i>
+                                                    <h6>Dubai</h6>   
+                                                </a>
+                                                <ul class="dropdown-menu place-menue" aria-labelledby="navbarDropdown">
+                                                    <li class="places">
+                                                        <a href="#">
+                                                            <i class="fas fa-location-arrow"></i>
+                                                            <h6>Place1</h6>
+                                                        </a>
+                                                        <span class="grandson-status not-reg"><i class="fas fa-times"></i>8</span>
+                                                        <span class="explan-not-reg">Register But Not Attend</span>
+                                                        <span class="grandson-status reg"><i class="fas fa-check"></i>65</span>
+                                                        <span class="explan-reg">Register And Attend</span>
+                                                       
+                                                    </li>
+                                                    <hr class="grandson-hr">
+                                                    <li class="places">
+                                                        <a href="#">
+                                                            <i class="fas fa-location-arrow"></i>
+                                                            <h6>Place2</h6>
+                                                        </a>
+                                                        <span class="grandson-status not-reg"><i class="fas fa-times"></i>8</span>
+                                                        <span class="explan-not-reg">Register But Not Attend</span>
+                                                        <span class="grandson-status reg"><i class="fas fa-check"></i>65</span>
+                                                        <span class="explan-reg">Register And Attend</span>
+                                                    </li>
+                                                    <hr class="grandson-hr">
+                                                    <li class="places">
+                                                        <a href="#">
+                                                            <i class="fas fa-location-arrow"></i>
+                                                            <h6>Place3</h6>
+                                                        </a>
+                                                        <span class="grandson-status not-reg"><i class="fas fa-times"></i>8</span>
+                                                        <span class="explan-not-reg">Register But Not Attend</span>
+                                                        <span class="grandson-status reg"><i class="fas fa-check"></i>65</span>
+                                                        <span class="explan-reg">Register And Attend</span>
+                                                    </li>
+                                                    <hr class="grandson-hr">
+                                                </ul>            
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </td>   
+                                <td>
+                                    <span class="country-count">75</span>
+                                </td>
+                            </tr>	
+                        </table>
+                    </div>
+                    <a href="#" class='btn btn-primary exbut'><i class="fas fa-download"></i>Export</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
